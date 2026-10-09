@@ -552,7 +552,11 @@ struct CompactSliderDemo: View {
                     .foregroundStyle(.secondary)
             }
             .padding()
-            .background(Color.secondary.opacity(0.1))
+            .background(
+                Group {
+                    Color.secondary.opacity(0.1)
+                }
+            )
             .cornerRadius(12)
 
             VStack(alignment: .leading, spacing: 16) {
@@ -569,7 +573,11 @@ struct CompactSliderDemo: View {
                     .foregroundStyle(.green)
             }
             .padding()
-            .background(Color.green.opacity(0.1))
+            .background(
+                Group {
+                    Color.green.opacity(0.1)
+                }
+            )
             .cornerRadius(12)
 
             Divider()
@@ -594,7 +602,11 @@ struct CompactSliderDemo: View {
                     .cornerRadius(8)
             }
             .padding()
-            .background(Color.secondary.opacity(0.1))
+            .background(
+                Group {
+                    Color.secondary.opacity(0.1)
+                }
+            )
             .cornerRadius(12)
 
             VStack(alignment: .leading, spacing: 16) {
@@ -630,7 +642,11 @@ struct CompactSliderDemo: View {
                     .foregroundStyle(.green)
             }
             .padding()
-            .background(Color.green.opacity(0.1))
+            .background(
+                Group {
+                    Color.green.opacity(0.1)
+                }
+            )
             .cornerRadius(12)
         }
         .padding()
