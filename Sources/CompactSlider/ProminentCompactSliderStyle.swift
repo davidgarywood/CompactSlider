@@ -23,18 +23,22 @@ public struct ProminentCompactSliderStyle: CompactSliderStyle {
                 Color.label.opacity(configuration.isHovering || configuration.isDragging ? 1 : 0.7)
             )
             .background(
-                Color.label
-                    .opacity(
-                        useGradientBackground && (configuration.isDragging || configuration.isHovering) ? 0 : 0.075
-                    )
+                Group {
+                    Color.label
+                        .opacity(
+                            useGradientBackground && (configuration.isDragging || configuration.isHovering) ? 0 : 0.075
+                        )
+                }
             )
             .background(
-                LinearGradient(
-                    colors: [lowerColor, upperColor],
-                    startPoint: .leading,
-                    endPoint: .trailing
-                )
-                .opacity(useGradientBackground && (configuration.isDragging || configuration.isHovering) ? 0.2 : 0)
+                Group {
+                    LinearGradient(
+                        colors: [lowerColor, upperColor],
+                        startPoint: .leading,
+                        endPoint: .trailing
+                    )
+                    .opacity(useGradientBackground && (configuration.isDragging || configuration.isHovering) ? 0.2 : 0)
+                }
             )
             .accentColor(
                 configuration.isRangeValues

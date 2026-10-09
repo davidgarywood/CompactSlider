@@ -93,27 +93,47 @@ private extension View {
             ScaleView()
                 .frame(height: 50, alignment: .top)
         }
-        .background(Color.label.opacity(0.1))
+        .background(
+            Group {
+                Color.label.opacity(0.1)
+            }
+        )
         
         ZStack {
             ScaleView(scaleLength: 25, secondaryScaleLength: 15, lineWidth: 2)
                 .frame(height: 50, alignment: .top)
         }
-        .background(Color.label.opacity(0.1))
+        .background(
+            Group {
+                Color.label.opacity(0.1)
+            }
+        )
         
         ZStack {
             ScaleView(scaleLength: 0, secondaryScaleLength: 0)
                 .frame(height: 50, alignment: .top)
         }
-        .background(Color.label.opacity(0.1))
+        .background(
+            Group {
+                Color.label.opacity(0.1)
+            }
+        )
         
         ScaleView(steps: 30)
             .frame(height: 50, alignment: .top)
-            .background(Color.label.opacity(0.1))
+            .background(
+                Group {
+                    Color.label.opacity(0.1)
+                }
+            )
         
         ScaleView(steps: 10, scaleLength: 25, lineWidth: 5)
             .frame(height: 50, alignment: .top)
-            .background(Color.label.opacity(0.1))
+            .background(
+                Group {
+                    Color.label.opacity(0.1)
+                }
+            )
     }
     .frame(width: 300)
     .padding()

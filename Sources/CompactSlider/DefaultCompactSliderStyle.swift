@@ -12,7 +12,11 @@ public struct DefaultCompactSliderStyle: CompactSliderStyle {
             .foregroundColor(
                 Color.label.opacity(configuration.isHovering || configuration.isDragging ? 1 : 0.7)
             )
-            .background(Color.label.opacity(0.075))
+            .background(
+                Group {
+                    Color.label.opacity(0.075)
+                }
+            )
             .clipShape(RoundedRectangle(cornerRadius: .cornerRadius))
     }
 }
